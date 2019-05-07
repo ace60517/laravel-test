@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function ($name = 'John') {
-    return $name;
-    // return view('welcome');
+Route::get('/', function () {
+    return view('welcome');
 });
 
 Route::get('/todo','TodoController@index');
 Route::post('/todo','TodoController@update');
-// Route::delete('/todo/{todo}','TodoController@destroy');
-Route::delete('/todo/{User}','TodoController@destroy');
+Route::delete('/todo/{todos}','TodoController@destroy');
